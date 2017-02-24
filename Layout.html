@@ -3,10 +3,66 @@
 
 <head>
 	<meta charset="UTF-8">
-	<title>Estructuras/Layouts</title>
+	<title>Estructuras/estructura con posición absoluta</title>
 </head>
 <style>
 	/* Aquí va el código CSS */
+    body{
+        border: 0;
+        margin: 0;
+        padding: 0;
+        background-color: skyblue;
+    }
+    h1{
+        color: black;
+        text-align: center;
+    }
+    nav{
+        position: absolute;
+        width: 25%;
+        height: 600px;
+        left: 0;
+        top:0;
+        background-color: antiquewhite;
+    }
+    .column{
+        margin-left: 25%;
+        padding-bottom: 200px;
+    }
+    
+    .column header, .column section, footer{
+        height: 200px;
+        padding: 1em;
+        box-sizing: border-box;
+        
+        
+    }
+    
+    .column header{
+        background-color: cadetblue;
+        
+    }
+    
+    .column section{
+         background-color: coral;
+        
+    }
+    
+    footer{
+        background-color: aquamarine;
+        width: 100%;
+        position: fixed;
+        bottom: 0;
+        
+        
+    }
+    
+    
+    
+    
+        
+        
+    
 </style>
 
 <body>
@@ -30,7 +86,7 @@
     </div>
     
     <footer>
-        <h1>footer</h1>
+        <h1>Footer</h1>
     </footer>
     
 </body>
