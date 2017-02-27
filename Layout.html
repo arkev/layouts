@@ -18,20 +18,11 @@
         text-align: center;
     }
     nav{
-        position: absolute;
-        width: 25%;
-        height: 600px;
-        left: 0;
-        top: 0;
+        width: 100%;
         background-color: pink;
-    
-    }
-    .column{
-        margin-left: 25%;
-        padding-bottom: 200px;
         
      }
-    .column header, .column section, footer {
+    .column header, .column section, footer, nav {
         height: 200px;
         padding: 1em;
         box-sizing: border-box;
@@ -43,11 +34,43 @@
         background-color: violet;
              }
     footer{
-        position: fixed;
-        bottom: 0;
         background-color: purple; 
         width: 100%;
-    
+        
+    }
+    /*version tablet*/
+
+    @media screen and (min-width:600px){
+        nav{
+            width: 25%;
+            height: 600px; 
+            float: left; 
+            
+        }
+        .column{
+            width: 75%;
+            float: left; 
+        }
+        footer{
+            float: left; 
+        }
+        
+        /*version desktop*/
+        @media screen and (min-width: 1024px){
+            nav{
+                background-color: skyblue; 
+            }
+            .column header{
+                background-color: gray; 
+            }
+            .column section{
+                background-color: silver; 
+            }
+            footer{
+                background-color: peru; 
+            }
+        
+            
 </style>
 
 <body>
