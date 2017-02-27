@@ -3,14 +3,53 @@
 
 <head>
 	<meta charset="UTF-8">
-	<title>Estructuras/Layouts</title>
+	<title>Estructuras con posicion absoluta</title>
 </head>
 <style>
 	/* Aquí va el código CSS */
+    
+body{ border:0;
+      margin:0;
+      padding:0;
+      background-color: aquamarine;
+    }
+    h1{
+        color: aliceblue;
+        text-align: center;
+             }
+    nav{
+        position: absolute;
+        width: 25%;
+        height: 600px;
+        left: 0;
+        top: 0;
+        background-color: black;
+    }
+    .column{
+        margin-left: 25%;
+    }
+    .column header, .column section, footer{ 
+        height: 200px;
+        padding: 1em;
+        box-sizing:border-box
+    }
+    .column header{
+        background-color: blue;
+    }
+    .column section{
+        background-color: blueviolet;
+    }
+    footer
+    {position: fixed;
+     bottom: 0;
+     background-color: brown;
+        width: 100%;
+    }
+    
 </style>
 
-<body>
-    <div class="container">
+  <body>
+      <div class="container">
         <nav>
             <h1>Nav</h1>
         </nav>
@@ -34,3 +73,4 @@
     </footer>
     
 </body>
+\ No newline at end of file
