@@ -3,7 +3,7 @@
 
 <head>
 	<meta charset="UTF-8">
-	<title>Estructuras con posición absoluta</title>
+	<title>Estructuras con float</title>
 </head>
 <style>
 	/* Aquí va el código CSS */
@@ -20,18 +20,11 @@
        
     }
     nav{
-        position: absolute;
-        width: 25%;
-        height: 600px;
-        left: 0; 
-        top: 0;
+        width: 100%;
         background-color: dimgray;
+
     }
-    .column{
-        margin-left: 25%; 
-        padding-bottom: 200px;
-    }
-    .column header, .column section, footer {
+    .column header, .column section, footer, nav {
         height: 200px;  
         padding: 1em;
         box-sizing: border-box;
@@ -46,11 +39,41 @@
     }
     footer
     {
-        position: fixed;
-        bottom: 0;
         background-color: darkturquoise;
         width: 100%;
     }
+    /*versión tablet */
+    
+    @media screen and (min-width:600px){
+        nav{
+            width: 25%;
+            height: 600px;
+            float: left;
+        }
+        .column{
+            width: 75%;
+            float:left;
+        }
+        footer{
+            float: left;
+        }
+    }
+    /*versión desktop*/
+    @media screen and (min-width:1024px){
+        nav{
+            background-color:skyblue
+        }
+        .column header{
+            background-color: black
+        }
+        .column section{
+            background-color: silver
+        }
+        footer{
+            background-color: mediumaquamarine
+        }
+    }
+        
 </style>
 
 <body>
