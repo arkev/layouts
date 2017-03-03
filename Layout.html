@@ -3,77 +3,80 @@
 
 <head>
 	<meta charset="UTF-8">
-	<title>Estructuras con float</title>
+	<title>Estructuras con posicion absoluta</title>
 </head>
 <style>
 	/* Aquí va el código CSS */
     body{
-        border: 0;
         margin: 0;
         padding: 0;
-        background-color: grey;
+        background-color: dimgray;
     }
-    
     h1{
-        color:lightgray;
+        color: white;
         text-align: center;
-       
     }
     nav{
+        display: inline-block;
+        vertical-align: top;
         width: 100%;
-        background-color: dimgray;
-
-    }
-    .column header, .column section, footer, nav {
-        height: 200px;  
+        height: 200px;
+        background-color:darkcyan;
         padding: 1em;
         box-sizing: border-box;
         
-    }
-      .column header {
-        background-color: aliceblue;
-           
-    }
-      .column section {
-        background-color: skyblue;        
-    }
-    footer
-    {
-        background-color: darkturquoise;
+     }
+    .column header, .column section{
+        display: inline-block;
+        vertical-align: top;
+        height: 200px;
         width: 100%;
+  }
+    .column header {
+        background-color: skyblue;
+        }
+    . .column section {
+        background-color: lightblue;
+             }
+    footer{
+        background-color: grey; 
+        width: 100%;
+        height: 200px;
+        padding: 1em;
+        
     }
-    /*versión tablet */
-    
+    /*version tablet*/
+
     @media screen and (min-width:600px){
         nav{
             width: 25%;
-            height: 600px;
-            float: left;
+            height: 600px; 
         }
-        .column{
-            width: 75%;
-            float:left;
+       .column {
+            display: inline-block;
+            width: 74.3%
         }
-        footer{
-            float: left;
-        }
-    }
-    /*versión desktop*/
-    @media screen and (min-width:1024px){
-        nav{
-            background-color:skyblue
-        }
-        .column header{
-            background-color: black
-        }
-        .column section{
-            background-color: silver
-        }
-        footer{
-            background-color: mediumaquamarine
-        }
-    }
+    }    
+    
+        /*version desktop*/
+        @media screen and (min-width: 1024px){
+            nav{
+                background-color: skyblue; 
+            }
+            .column header{
+                background-color: gray; 
+            
+            }
+            .column section{
+                background-color: darkgray; 
+            }
+            footer{
+                background-color: silver; 
+            }
+        }    
+
         
+            
 </style>
 
 <body>
