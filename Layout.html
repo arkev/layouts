@@ -25,7 +25,7 @@
         background-color: black;
     }
   
- .column header, .column section, footer, nav {
+ .column header, .column section, footer, nav{
         height: 200px;
         padding: 1em;
         box-sizing: border-box;
@@ -50,10 +50,34 @@
         }
         .column{
             width: 75%;
-            float: left;
+            display: inline-block;
             }
         footer{
-            float: left;
+            display: inline-block;
+            
+            
+            
+            
+    @media screen and (min-width:1024px){
+        header{
+            display: inline-block;
+            border-color: blue;
+            background-color: yellow;
+            height: 200px;
+            width: 75%;
+            
+        }
+        nav {
+            background-color: darkgreen;
+        }
+        .column header {
+            background-color: darkcyan;
+        }
+        .column section {
+            background-color: salmon;
+        }
+        footer {
+            background-color: cadetblue;
         }
     }
 
