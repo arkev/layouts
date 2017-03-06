@@ -3,80 +3,89 @@
 
 <head>
 	<meta charset="UTF-8">
-	<title>Estructuras con posicion absoluta</title>
+	<title>Estructuras/estructura con flexbox</title>
 </head>
 <style>
 	/* Aquí va el código CSS */
     body{
+        border: 0;
         margin: 0;
         padding: 0;
-        background-color: dimgray;
+        background-color: skyblue;
     }
     h1{
         color: white;
         text-align: center;
     }
+    
     nav{
-        display: inline-block;
-        vertical-align: top;
         width: 100%;
         height: 200px;
-        background-color:darkcyan;
+        background-color: darkgray;
         padding: 1em;
         box-sizing: border-box;
-        
-     }
-    .column header, .column section{
-        display: inline-block;
-        vertical-align: top;
+    }
+    
+    .column{
+        width: 100%;
+        box-sizing: border-box;     
+    }
+    
+    .column header, .column section, footer{
         height: 200px;
         width: 100%;
-  }
-    .column header {
-        background-color: skyblue;
-        }
-    . .column section {
-        background-color: lightblue;
-             }
-    footer{
-        background-color: grey; 
-        width: 100%;
-        height: 200px;
         padding: 1em;
+        box-sizing: border-box;
+    }
+    
+    .column header{
+        background-color: dimgrey;
         
     }
-    /*version tablet*/
-
-    @media screen and (min-width:600px){
-        nav{
-            width: 25%;
-            height: 600px; 
-        }
-       .column {
-            display: inline-block;
-            width: 74.3%
-        }
-    }    
     
-        /*version desktop*/
-        @media screen and (min-width: 1024px){
-            nav{
-                background-color: skyblue; 
-            }
-            .column header{
-                background-color: gray; 
-            
-            }
-            .column section{
-                background-color: darkgray; 
-            }
-            footer{
-                background-color: silver; 
-            }
-        }    
+    .column section{
+         background-color: lightcyan;
+    }
+    
+    footer{
+        background-color: aquamarine;
+    }
+    
+    /* versión tablet */
+    
+    @media screen and (min-width:600px){
+        .container {
+            display: flex;
+        }
 
+        nav{
+            height: 600px;
+            flex:1;
+        }
         
-            
+        .column{
+            flex:2;
+        
+        }
+    }
+    
+    /* versión desktop */
+    
+    @media screen and (min-width:1024px){
+        nav {
+            background-color: lightblue;
+        }
+        .column header {
+            background-color:grey;
+        }
+        .column section {
+            background-color: aquamarine;
+        }
+        footer {
+            background-color: black;
+        }
+    }
+
 </style>
 
 <body>
@@ -100,7 +109,8 @@
     </div>
     
     <footer>
-        <h1>footer</h1>
+        <h1>Footer</h1>
     </footer>
     
 </body>
+    
