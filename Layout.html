@@ -10,77 +10,76 @@
     body{
         margin: 0;
         padding: 0;
-        background-color: deeppink;
+        background-color: lightblue;
     }
     h1{
-        color: white;
+        color: darkslategray;
         text-align: center;
     }
     nav{
-        display: inline-block;
-        vertical-align: top;
         width: 100%;
         height: 200px;
-        background-color: pink;
-        padding: 1em;
+        background:cadetblue;
+        padding: 2.5%;
         box-sizing: border-box;
         
      }
-    .column header, .column section{
-        display: inline-block;
-        vertical-align: top;
-        height: 200px;
+    .column section, 
+    .column header {
         width: 100%;
+        height: 200px;
+        padding: 2.5%;
+        box-sizing: border-box;
   }
     .column header {
-        background-color: bisque;
+        background-color: skyblue;
         }
     . .column section {
-        background-color: violet;
+        background-color: blue;
              }
     footer{
-        background-color: purple; 
         width: 100%;
         height: 200px;
-        padding: 1em;
+        padding: 2.5%;
+        background-color: darkturquoise;
+        box-sizing: border-box;
         
     }
-    /*version tablet*/
-
-    @media screen and (min-width:600px){
-        nav{
-            width: 25%;
-            height: 600px; 
-        }
-       .column {
-            display: inline-block;
-            width: 74%;
-        }
-    }    
+    /* versión tablet */
     
-        /*version desktop*/
-        @media screen and (min-width: 1024px){
-            nav{
-                background-color: skyblue; 
-            }
-            .column header{
-                background-color: gray; 
-            
-            }
-            .column section{
-                background-color: silver; 
-            }
-            footer{
-                background-color: peru; 
-            }
-        }    
-
+    @media screen and (min-width:600px) {
+        .container {
+            display:flex;
+        }
+        nav {
+            height: 600px;
+            flex:1;
+        }
+        .column {
+            flex:2;
+        }
         
-            
+    }
+    /* versión desktop */
+    
+    @media screen and (min-width:1024px) {
+        nav {
+            background-color: forestgreen;
+        }
+        header {
+            background-color: darkolivegreen;
+        }
+        section {
+            background-color: greenyellow;
+        }
+        footer {
+            background-color: lightgreen;
+        }
+    }
 </style>
 
 <body>
-    <div class="container">
+    <div class="container clearfix">
         <nav>
             <h1>Nav</h1>
         </nav>
@@ -96,11 +95,11 @@
                 <h1>Section 2</h1>
             </section>
         </section>
-        
+      
+       
     </div>
-    
-    <footer>
-        <h1>footer</h1>
-    </footer>
-    
+     <footer>
+            <h1>footer</h1></footer>
 </body>
+
+</html>
