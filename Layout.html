@@ -2,76 +2,57 @@
 <html lang="es">
 
 <head>
-	<meta charset="UTF-8">
-	<title>Estructuras/estructura con flexbox</title>
-</head>
+    <meta charset="UTF-8">
+    <title>Estructuras/estructura con flexbox-grid</title>
+    <link rel="stylesheet" type="text/css" href="flexboxgrid.min.css"> </head>
 <style>
-	/* Aquí va el código CSS */
-    body{
+    /* Aquí va el código CSS */
+    
+    body {
         border: 0;
         margin: 0;
         padding: 0;
         background-color: skyblue;
     }
-    h1{
+    
+    h1 {
         color: black;
         text-align: center;
     }
     
-    nav{
-        width: 100%;
-        height: 200px;
+    nav {
         background-color: antiquewhite;
-        padding: 1em;
-        box-sizing: border-box;
     }
     
-    .column{
-        width: 100%;
-        box-sizing: border-box;     
-    }
-    
-    .column header, .column section, footer{
+    .column header,
+    .column section,
+    footer,
+    nav {
         height: 200px;
-        width: 100%;
         padding: 1em;
-        box-sizing: border-box;
     }
     
-    .column header{
+    .column header {
         background-color: cadetblue;
-        
     }
     
-    .column section{
-         background-color: coral;
+    .column section {
+        background-color: coral;
     }
     
-    footer{
+    footer {
         background-color: aquamarine;
     }
-    
     /* versión tablet */
     
-    @media screen and (min-width:600px){
-        .container {
-            display: flex;
-        }
-
-        nav{
-            height: 600px;
-            flex:1;
-        }
-        
-        .column{
-            flex:2;
-        
+    @media screen and (min-width:768px) {
+        nav {
+            height: 100%;
         }
     }
-    
     /* versión desktop */
     
-    @media screen and (min-width:1024px){
+    @media screen and (min-width:1024px) {
         nav {
             background-color: darkgreen;
         }
@@ -85,31 +66,35 @@
             background-color: cadetblue;
         }
     }
-
 </style>
 
 <body>
     <div class="container">
-        <nav>
-            <h1>Nav</h1>
-        </nav>
-        
-        <section class="column">
-            <header>
-                <h1>Header</h1>
-            </header>
-            <section>
-                <h1>Section 1</h1>
-            </section>
-            <section>
-                <h1>Section 2</h1>
-            </section>
+        <!--Fila 1-->
+        <section class="row">
+            <!--Columna 1-->
+            <div class="col-xs-12 col-sm-3">
+                <nav class="box">
+                    <h1>Nav</h1> </nav>
+            </div>
+            <!--Columna 2-->
+            <div class="col-xs-12 col-sm-9 column">
+                <header class="box">
+                    <h1>Header</h1> </header>
+                <section class="box">
+                    <h1>Section 1</h1> </section>
+                <section class="box">
+                    <h1>Section 1</h1> </section>
+            </div>
         </section>
+        <!--/Fila 1-->
         
-    </div>
-    
-    <footer>
-        <h1>Footer</h1>
-    </footer>
-    
+        <!--Fila 2-->
+        <section class="row">
+            <div class="col-xs-12">
+                <footer class="box">
+                    <h1>Footer</h1> </footer>
+            </div>
+        </section>
+        <!--/Fila 2-->
 </body>
