@@ -2,104 +2,104 @@
 <html lang="es">
 
 <head>
-	<meta charset="UTF-8">
-	<title>Estructuras con posicion absoluta</title>
-</head>
+    <meta charset="UTF-8">
+    <title>Estructuras con Float</title>
+    <link rel="stylesheet" type="text/css" href="flexboxgrid.min.css"> </head>
 <style>
-	/* Aquí va el código CSS */
-    body{
+    /* Aquí va el código CSS */
+    body {
+        border: 0;
         margin: 0;
         padding: 0;
-        background-color: lightblue;
+        background-color: cadetblue;
     }
-    h1{
-        color: darkslategray;
+    
+    h1 {
+        color: whitesmoke;
         text-align: center;
     }
-    nav{
-        width: 100%;
-        height: 200px;
-        background:cadetblue;
-        padding: 2.5%;
-        box-sizing: border-box;
-        
-     }
-    .column section, 
+    
+    nav {
+        background-color: orange;
+    }
+    
+    .column header,
+    .column section,
+    footer,
+    nav {
+        height: 220px;
+        padding: 1em;
+    }
+    
     .column header {
-        width: 100%;
-        height: 200px;
-        padding: 2.5%;
-        box-sizing: border-box;
-  }
-    .column header {
-        background-color: skyblue;
-        }
-    . .column section {
-        background-color: blue;
-             }
-    footer{
-        width: 100%;
-        height: 200px;
-        padding: 2.5%;
-        background-color: darkturquoise;
-        box-sizing: border-box;
-        
+        background-color: darkcyan;
+    }
+    
+    .column section {
+        background-color: mediumspringgreen;
+    }
+    
+    footer {
+        background-color: lightslategray;
     }
     /* versión tablet */
     
-    @media screen and (min-width:600px) {
-        .container {
-            display:flex;
-        }
+    @media screen and (min-width:768px) {
         nav {
             height: 600px;
-            flex:1;
         }
-        .column {
-            flex:2;
-        }
-        
     }
     /* versión desktop */
     
     @media screen and (min-width:1024px) {
         nav {
-            background-color: forestgreen;
+            background-color: cornflowerblue;
         }
-        header {
-            background-color: darkolivegreen;
+        .column header {
+            background-color: mediumvioletred;
         }
-        section {
-            background-color: greenyellow;
+        .column section {
+            background-color: mediumorchid;
         }
         footer {
-            background-color: lightgreen;
+            background-color: midnightblue;
         }
     }
 </style>
 
 <body>
-    <div class="container clearfix">
-        <nav>
-            <h1>Nav</h1>
-        </nav>
-        
-        <section class="column">
-            <header>
-                <h1>Header</h1>
-            </header>
-            <section>
-                <h1>Section 1</h1>
-            </section>
-            <section>
-                <h1>Section 2</h1>
-            </section>
+    <div class="container">
+        <!-- Fila 1-->
+        <section class="row">
+            <!-- Columna 1-->
+            <div class="col-xs-12 col-sm-3">
+                <nav class="box">
+                    <h1>Nav</h1> 
+                </nav>
+            </div>
+            <!-- Columna 2-->
+            <div class="col-xs-12 col-sm-9 column">
+                <header class="box">
+                    <h1>Header</h1> 
+                </header>
+                <section class="box">
+                    <h1>Section 1</h1> 
+                </section>
+                <section class="box">
+                    <h1>Section 2</h1> 
+                </section>
+            </div>
         </section>
-      
-       
-    </div>
-     <footer>
-            <h1>footer</h1></footer>
+        <!-- /Fila 1-->
+        
+        <!-- Fila 2-->
+        <section class="row">
+            <div class="col-xs-12">
+                <footer class="box">
+                    <h1>footer</h1> 
+                </footer>
+            </div>
+        </section>
+        <!-- /Fila 2-->
+    </div>  
 </body>
-
-</html>
