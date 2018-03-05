@@ -7,6 +7,49 @@
 </head>
 <style>
 	/* Aquí va el código CSS */
+    body{
+        background-color: darkblue;
+        text-align: center;
+        color: white;
+        padding: 0;
+        margin: 0;
+    }
+    nav{
+        background-color: orange;
+        width: 20%;
+        height: 600px;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    header, section, footer{
+        height: 200px;
+    }
+    header{
+        background-color: green;
+    }
+    .column section{
+        background-color: red;
+    }
+    footer{
+        background-color: blue;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+    }
+    .container{
+        position: relative;
+    }
+    .column{
+        width: 80%;
+        position: absolute;
+        top: 0;
+        left: 20%;
+    }
+    h1{
+        margin-top: 2em;
+        display: inline-block;
+    }
 </style>
 
 <body>
@@ -27,10 +70,10 @@
             </section>
         </section>
         
+        <footer>
+            <h1>footer</h1>
+        </footer>
+        
     </div>
-    
-    <footer>
-        <h1>footer</h1>
-    </footer>
     
 </body>
