@@ -6,53 +6,80 @@
 	<title>Estructuras/Layouts</title>
 </head>
 <style>
-	/* Aquí va el código CSS */
+	/* Desktop */
     body{
-        background-color: darkblue;
+        background-color: purple;
         text-align: center;
         color: white;
         padding: 0;
         margin: 0;
-
     }
     nav{
-        background-color: orange;
-        width: 20%;
-        height: 600px;
-        position: absolute;
-        top: 0;
-        left: 0;
-        
-    }
-    header, section, footer{
-        height: 200px;
-    }
-    header{
-        background-color: green;
-    }
-    .column section{
-        background-color: red;
-    }
-    footer{
         background-color: blue;
-        position: fixed;
-        bottom: 0;
+        width: 25%;
+        height: 600px;
+        float: left;
+    }
+    header, .column section, footer{
+        height: 200px;
+        float: left;
         width: 100%;
     }
+    header{
+        background-color: greenyellow;
+        float: left;
+    }
+    .column section{
+        background-color: blueviolet;
+        float: left;
+    }
+    footer{
+        background-color: green;
+        width: 100%;
+        float: left;
+    }
     .container{
-        position: relative;
     }
     .column{
-        width: 80%;
-        position: absolute;
-        top: 0;
-        left: 20%;
+        width:75%;
+        float: left;
     }
     h1{
         margin-top: 2em;
         display: inline-block;
     }
+    	/* Tablet */
+    @media screen and (max-width:1024px) {
+  body{
+        background-color: blue;
+        
+    }
+        nav{
+        background-color: red;
+    }
+        header{
+        background-color: purple;
+    }
+        .column section{
+        background-color: green;
+    }
+        footer{
+        background-color: darkcyan;
+    }
+    }
+    
+    	/* Movil */
+    @media screen and (max-width:600px) {
+        nav, .column{
+            width: 100%;
+        }
+        nav{
+            height: 200%;
+        }
+    }
+    
 </style>
+    
 
 <body>
     <div class="container">
@@ -78,4 +105,4 @@
         
     </div>
       
-</body>
+</body> 
