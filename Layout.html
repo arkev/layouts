@@ -6,50 +6,96 @@
 	<title>Estructuras/Layouts</title>
 </head>
 <style>
-	/* Aquí va el código CSS */
+	/* Desktop */
     .container {
-        position: relative;
         width: 100%;
 }
     header {
-        background-color: #008100;
+        float: left;
+        background-color: greenyellow;
         height: 200px;
+        width: 100%;
     }
     nav {
-        position: absolute;
-        left: 0px;
-        width: 20%;
-        background-color: #ffa600;
+        float: left;
+        width: 25%;
+        background-color: bisque;
         height: 600px;
+    
 }
-    section {
-        background-color: #f00;
+    .column section {
+        background-color: olive;
         height: 200px;
+        float: left;
+        width: 100%;
 }
     section.column {
-        position: absolute;
-        left: 20%;
-        width: 80%;
+        float: left;
+        width: 75%;
 }
     footer {
-        position: fixed;
-        bottom: 0;
-        left: 0;
+        float: left;
         height: 200px;
-        background-color: blue;
+        background-color: salmon;
         width: 100%;
+        
 }
     body {
         margin: 0;
         padding: 0;
         color: white;
-        background-color: #00008d;
+        background-color:darkcyan;
+    
 }
     h1 {
         text-align: center;
         margin-top: 2em;
         display: inline-block;
         width: 100%;
+    }
+    /* Tablet */
+ @media screen and (max-width:1024px){
+     nav{
+         background-color: #DD0000;
+     }
+     header{
+         background-color: #771FE1;
+         
+     }
+     .column section{
+         background-color: #38650E;
+         
+     }
+     footer{
+         background-color: #4C8A8A;
+     }
+     body {
+         background-color: #0000FF;
+     }
+    }
+    /* Móvil */
+@media screen and (max-width:599px){
+        nav{
+         display: inline;
+         height: 200px;
+         width: 100%;
+        
+        }
+        section.column{
+            width: 100%
+        }
+        header{
+         width: 100%;
+        }
+        .column section{
+         display: inline;
+         width: 100%
+        }
+        footer{
+         display: inline;
+            
+        }
+        
     }
 </style>
 
