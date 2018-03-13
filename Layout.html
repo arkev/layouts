@@ -6,50 +6,82 @@
 	<title>Estructuras/Layouts</title>
 </head>
 <style>
-	/* Aquí va el código CSS */
+	/* desktop */
     body{
-        background-color: darkblue;
+        background-color: orange;
         text-align: center;
         color: white;
         padding: 0;
         margin: 0;
             }
     nav{
-        background-color: orange;
-        width: 20%;
+        background-color: green;
+        width: 25%;
         height: 600px;
-        position: absolute;
-        top: 0;
-        left: 0;
+        float: left;
     }
-    header,section,footer{
+    header,.column section,footer{
         height: 200px;
     }
     header{
-        background-color: green;
-    }
-    .column section{
         background-color: red;
     }
+    .column section{
+        background-color: purple;
+    }
     footer{
-        background-color: blue;
-        position: fixed;
-        bottom: 0;
+        background-color:blue;
         width: 100%;
+        float: left;
+
     }
     .container{
         position: relative;
     }
     .column{
-        width: 80%;
-        position: absolute;
-        top: 0;
-        left: 20%;
+        width: 75%;
+        float: left;
+       
     }
     h1{
         margin-top: 2em;
         display: inline-block;
     }
+
+    /* tablet */
+    @media screen and (max-width:1024px) {
+       body{
+        background-color: darkblue;
+            } 
+        nav{
+        background-color: red;
+    }
+    header{
+        background-color: blueviolet;
+    }
+    .column section{
+        background-color: green;
+    }
+    footer{
+        background-color: darkcyan;
+
+    }
+
+    }
+
+    /* movil */
+    @media screen and (max-width:600px) {
+      nav{
+        width: 100%;
+        height: 200px;
+    }
+    .column{
+        width: 100%;
+       
+    }
+
+    }
+
 
 </style>
 
