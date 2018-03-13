@@ -6,7 +6,92 @@
 	<title>Estructuras/Layouts</title>
 </head>
 <style>
-	/* Aquí va el código CSS */
+	/* Desktop */
+    .container {
+        width: 100%;
+}
+    header {
+        display: inline-block;
+        background-color: greenyellow;
+        height: 200px;
+        width: 100%;
+        vertical-align: top;
+    }
+    nav {
+        display: inline-block;
+        width: 25%;
+        background-color: bisque;
+        height: 600px;
+        vertical-align: top;
+    
+}
+    .column section {
+        background-color: olive;
+        height: 200px;
+}
+    section.column {
+        display: inline-block;
+        width: 74%;
+        vertical-align: top;
+}
+    footer {
+        display: inline-block;
+        vertical-align: bottom;
+        height: 200px;
+        background-color: salmon;
+        width: 100%;
+        
+}
+    body {
+        margin: 0;
+        padding: 0;
+        color: white;
+        background-color:darkcyan;
+    
+}
+    h1 {
+        text-align: center;
+        margin-top: 2em;
+        display: inline-block;
+        width: 100%;
+    }
+    /* Tablet */
+ @media screen and (max-width:1024px){
+     nav{
+         background-color: #DD0000;
+     }
+     header{
+         background-color: #771FE1;
+         
+     }
+     .column section{
+         background-color: #38650E;
+         
+     }
+     footer{
+         background-color: #4C8A8A;
+     }
+     body {
+         background-color: #0000FF;
+     }
+    }
+    /* Móvil */
+@media screen and (max-width:599px){
+        nav{
+         height: 200px;
+         width: 100%;
+        
+        }
+        section.column{
+         width: 100%;
+        }
+        
+        .column section{
+         height: 200px;
+        }
+    
+        
+    }
 </style>
 
 <body>
@@ -26,11 +111,12 @@
                 <h1>Section 2</h1>
             </section>
         </section>
+        <footer>
+        <h1>footer</h1>
+    </footer>
         
     </div>
     
-    <footer>
-        <h1>footer</h1>
-    </footer>
+    
     
 </body>
