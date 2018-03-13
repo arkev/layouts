@@ -6,13 +6,145 @@
 	<title>Estructuras/Layouts</title>
 </head>
 <style>
-	/* Aquí va el código CSS */
+	/* Aquí va el código CSS*/
+	.container {
+		   
+  width: 100%;
+}
+
+
+ header {
+	 display: inline-block; 
+ background-color: #F03; 
+height: 200px; 
+width: 100%; 
+ }
+ 
+  nav { 
+        display: inline-block;
+        width: 24%;
+		height: 600px; 
+		vertical-align: top;
+        background-color: #9F3;
+        
+		}
+		
+    .column section {
+   display: inline-block;
+   vertical-align:top;
+ background-color: #C09;
+        height: 200px;
+		width: 100%; 
+}
+    .column {
+        display:inline-block;
+		
+        width: 75%;
+}
+
+footer {
+       
+		display:inline-block; 
+        height: 200px;
+        background-color: #3CF;
+        width: 100%;
+		
+		
+		
+}
+
+
+body {
+      
+        margin: 0; 
+        padding: 0;
+        color: white;
+        background-color: #00008d;		
+}
+ 
+ 
+  h1 {
+        text-align: center;
+        margin-top: 2em;
+        display: inline-block;
+       width: 100%;
+	 }
+	 
+/*tablet*/
+
+	   @media screen and (max-width:1024px) {   
+	  nav {
+		
+		   background-color: #DD0000; 
+		   }	   
+	  header { 	   
+	
+	    background-color: #771FE1;
+		}   
+		
+		.column section { 
+		
+		background-color: #38650E; 
+		}   
+		 
+		footer {
+			background-color: #4C8A8A; 
+		}
+		
+		body { 
+		
+		background-color: #0000FF;
+		}
+		
+		
+		 
+ }  
+	   
+	   
+	   
+	   
+@media screen and (max-width:599px) {   
+	  nav {
+		  
+		  height: 200px; 
+		  width: 100%; 
+		    
+		   }	   
+	  header { 
+	  width: 100%; 	   
+	   
+		}   
+		  
+		
+		section.column  {
+			width: 100%; 
+			
+		}
+		
+		.column section  {
+		
+			width: 100%; 
+			
+		}
+		
+		footer  {
+			
+		}
+		
+		
+		 
+ }  
+	
+		   
+	
 </style>
 
 <body>
     <div class="container">
+    
         <nav>
             <h1>Nav</h1>
+			    
         </nav>
         
         <section class="column">
@@ -34,3 +166,4 @@
     </footer>
     
 </body>
+
