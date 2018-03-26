@@ -2,11 +2,11 @@
 <html lang="es">
 
 <head>
-	<meta charset="UTF-8">
-	<title>Estructuras/Layouts</title>
+    <meta charset="UTF-8">
+    <title>Estructuras/Layouts</title>
 </head>
 <style>
-	/* desktop */
+    /* desktop */
     body{
         background-color: orange;
         text-align: center;
@@ -16,9 +16,10 @@
     }
     nav{
         background-color: green;
-        flex: 1;
+        width: 24%;
         height: 600px;
-
+        display: inline-block;
+        vertical-align: top;
     }
     header,.column section,footer{
         height: 200px;
@@ -32,22 +33,19 @@
     footer{
         background-color:blue;
         width: 100%;
-
-    }
-
-    .container{
-        display: flex;
+        display: inline-block;
     }
   
     .column{
-        flex: 2;
+        width: 75%;
+        display: inline-block;
+        vertical-align: top;
        
     }
     h1{
         margin-top: 2em;
         display: inline-block;
     }
-
     /* tablet */
     @media screen and (max-width:1024px) {
        body{
@@ -64,11 +62,8 @@
     }
     footer{
         background-color: darkcyan;
-
     }
-
     }
-
     /* movil */
     @media screen and (max-width:600px) {
       nav{
@@ -76,21 +71,14 @@
         height: 200px;
     }
     .column{
-        width: 100%;    
+        width: 100%;
        
     }
-    .container{
-        display: block;
     }
-
-    }
-
-
 </style>
 
 <body>
     <div class="container">
-
     
         <nav>
             <h1>Nav</h1>
@@ -108,10 +96,10 @@
             </section>
         </section>
 
-        
-        
-    </div>
-    <footer>
+        <footer>
          <h1>footer</h1>
         </footer>
+        
+    </div>
+    
 </body>
