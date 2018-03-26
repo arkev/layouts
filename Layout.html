@@ -16,10 +16,9 @@
     }
     nav{
         background-color: green;
-        width: 24%;
+        flex: 1;
         height: 600px;
-        display: inline-block;
-        vertical-align: top;
+
     }
     header,.column section,footer{
         height: 200px;
@@ -33,14 +32,15 @@
     footer{
         background-color:blue;
         width: 100%;
-        display: inline-block;
 
+    }
+
+    .container{
+        display: flex;
     }
   
     .column{
-        width: 75%;
-        display: inline-block;
-        vertical-align: top;
+        flex: 2;
        
     }
     h1{
@@ -76,8 +76,11 @@
         height: 200px;
     }
     .column{
-        width: 100%;
+        width: 100%;    
        
+    }
+    .container{
+        display: block;
     }
 
     }
@@ -87,6 +90,7 @@
 
 <body>
     <div class="container">
+
     
         <nav>
             <h1>Nav</h1>
@@ -104,10 +108,10 @@
             </section>
         </section>
 
-        <footer>
-         <h1>footer</h1>
-        </footer>
+        
         
     </div>
-    
+    <footer>
+         <h1>footer</h1>
+        </footer>
 </body>
