@@ -9,38 +9,30 @@
 	/* Desktop */
     .container {
         width: 100%;
+        display: flex;
+       
 }
     header {
-        display: inline-block;
         background-color: greenyellow;
         height: 200px;
-        width: 100%;
-        vertical-align: top;
+        width: 100%;   
     }
     nav {
-        display: inline-block;
-        width: 25%;
+        flex: 1;
         background-color: bisque;
         height: 600px;
-        vertical-align: top;
-    
 }
     .column section {
         background-color: olive;
         height: 200px;
 }
-    section.column {
-        display: inline-block;
-        width: 74%;
-        vertical-align: top;
+    .column {
+        flex: 2;
 }
     footer {
-        display: inline-block;
-        vertical-align: bottom;
-        height: 200px;
         background-color: salmon;
         width: 100%;
-        
+        height: 200px;
 }
     body {
         margin: 0;
@@ -77,17 +69,26 @@
     }
     /* Móvil */
 @media screen and (max-width:599px){
+    
+        .container {
+        display: block;
+        }
         nav{
          height: 200px;
          width: 100%;
         
         }
+        header {
+        width: 100%;
+        }
         section.column{
          width: 100%;
+
         }
         
         .column section{
-         height: 200px;
+         width: 100%;
+        
         }
     
         
@@ -111,12 +112,10 @@
                 <h1>Section 2</h1>
             </section>
         </section>
-        <footer>
+    </div>
+    <footer>
         <h1>footer</h1>
     </footer>
-        
-    </div>
-    
     
     
 </body>
