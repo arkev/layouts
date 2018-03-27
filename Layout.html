@@ -3,39 +3,33 @@
 
 <head>
 	<meta charset="UTF-8">
-	<title>Estructuras/Layouts</title>
-</head>
+	<title>Estructuras/Layouts</title> 
+    <link rel="stylesheet" href="flexboxgrid.css">
+</head> 
+
 <style>
 	/* Aquí va el código CSS desktop*/
-	.container {
-		display: flex; 
-		   
-  width: 100%;
-}
+	
 
 
  header {
 	   
  background-color: #F03; 
 height: 200px; 
-width: 100%; 
+
  }
  
   nav { 
-        flex: 1; 
+        
 		height: 600px; 
         background-color: #9F3;
         
 		}
 		
-    .column {
-       
-		flex: 2;
-		
-}
+  
 
 .column section { 
-		
+		background-color: #6C9;
 		height: 200px; 
 		}  
 
@@ -43,7 +37,7 @@ footer {
        
         height: 200px;
         background-color: #3CF;
-        width: 100%;
+        
 		
 		
 		
@@ -99,35 +93,17 @@ body {
 	   
 	   
 	   
-@media screen and (max-width:599px) {   
+@media screen and (max-width:768px) {   
  
- .container {
-		display: block; 
 
-}
 
 	  nav {
 		  
 		  height: 200px; 
-		  width: 100%; 
+		  
 		    
 		   }	   
-	  header { 
-	  width: 100%; 	   
-	   
-		}   
-		  
-		
-		section.column  {
-			width: 100%; 
-			
-		}
-		
-		.column section  {
-		
-			width: 100%; 
-			
-		}
+	
 		
 		footer  {
 			
@@ -142,30 +118,39 @@ body {
 </style>
 
 <body>
-    <div class="container">
+    <div class="row">
     
-        <nav>
+     <div class="col-xs-12 col-sm-3"> 
+    
+        <nav class="box">
             <h1>Nav</h1>
 			    
-        </nav>
+      </nav>
         
-        <section class="column">
-            <header>
+        </div>
+   
+        
+        <section class="column col-xs-12 col-sm-9">
+            <header class="box">
                 <h1>Header</h1>
             </header>
-            <section>
+            <section class="box">
                 <h1>Section 1</h1>
-            </section>
+            </section class="box">
             <section>
                 <h1>Section 2</h1>
             </section>
         </section>
+       <div class="col-xs-12">
         
-    </div>
-    
-    <footer>
+ 
+    <footer class="box">
         <h1>footer</h1>
     </footer>
-    
+    </div>
+        
+        
+    </div>
+     
 </body>
 
