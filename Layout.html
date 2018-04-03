@@ -4,38 +4,47 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Estructuras/Layouts</title> 
-    <link rel="stylesheet" href="flexboxgrid.css">
+    
 </head> 
 
 <style>
 	/* Aquí va el código CSS desktop*/
 	
-
+.grid {
+	display: grid;
+	grid-template-columns: repeat(4, 25%);
+	grid-template-rows: repeat(4, 200px);
+}
 
  header {
-	   
+	   grid-column-start:2;
+	   grid-column-end: 5;
  background-color: #F03; 
-height: 200px; 
+ 
 
  }
  
   nav { 
         
-		height: 600px; 
+	grid-row-start: 1;
+	grid-row-end: 4;
         background-color: #9F3;
         
 		}
 		
   
 
-.column section { 
+section { 
+grid-column-start: 2;
+grid-column-end: 5;
 		background-color: #6C9;
-		height: 200px; 
+		 
 		}  
 
 footer {
        
-        height: 200px;
+      grid-column-start: 1;
+	  grid-column-end: 5;
         background-color: #3CF;
         
 		
@@ -72,7 +81,7 @@ body {
 	    background-color: #771FE1;
 		}   
 		
-		.column section { 
+		 section { 
 		
 		background-color: #38650E; 
 		}   
@@ -97,18 +106,18 @@ body {
  
 
 
-	  nav {
+	  nav, header, section, footer {
 		  
 		  height: 200px; 
+		  width: 100%; 
 		  
 		    
 		   }	   
 	
 		
-		footer  {
-			
+		.grid {  
+		display:block;
 		}
-		
 		
 		 
  }  
@@ -118,39 +127,28 @@ body {
 </style>
 
 <body>
-    <div class="row">
-    
-     <div class="col-xs-12 col-sm-3"> 
-    
-        <nav class="box">
+    <div class="grid">
+   
+        <nav>
             <h1>Nav</h1>
 			    
       </nav>
+       
         
-        </div>
-   
-        
-        <section class="column col-xs-12 col-sm-9">
-            <header class="box">
+            <header>
                 <h1>Header</h1>
             </header>
-            <section class="box">
+            <section>
                 <h1>Section 1</h1>
-            </section class="box">
+            </section>
             <section>
                 <h1>Section 2</h1>
             </section>
-        </section>
-       <div class="col-xs-12">
-        
- 
-    <footer class="box">
+    <footer>
         <h1>footer</h1>
     </footer>
-    </div>
-        
-        
-    </div>
+ 
+        </div>
      
 </body>
 
